@@ -32,22 +32,40 @@ public class CollectionTest {
 
 	}
 
-	private static void printList(List<String> list){
-		for (String s: list)
-			System.out.printf("%s ", s);
-		System.out.println();
+//	private static void printList(List<String> list){
+//		for (String s: list)
+//			System.out.printf("%s ", s);
+//		System.out.println();
+//
+//	}
+//
+//	private static void removeList(Collection<String> items,
+//			Collection<String> itemsToRemove){
+//		Iterator<String> iterator = items.iterator();
+//
+//		while(iterator.hasNext()){
+//			if (itemsToRemove.contains(iterator.next()))
+//				iterator.remove();
+//		}
+//
+//	}
 
+
+	// Rewrite printList with generic method
+	private static <T> void printList(List<T> list){
+		for (T e : list) 
+			System.out.printf("%s ", e);
+		System.out.println();
 	}
 
-	private static void removeList(Collection<String> items,
-			Collection<String> itemsToRemove){
-		Iterator<String> iterator = items.iterator();
+	// Rewrite removeList with generic method
+	private static <T> void removeList(Collection<T> items,
+			Collection<T> itemsToRemove){
+		Iterator<T> iterator = items.iterator();
 
 		while(iterator.hasNext()){
 			if (itemsToRemove.contains(iterator.next()))
 				iterator.remove();
 		}
-
 	}
-
 }

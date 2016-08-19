@@ -39,8 +39,15 @@ public class Algorithms1 {
 		System.out.printf("Min value in the list: %s\n", Collections.min(list));
 	}
 
-	private static void output(List<Character> list) {
-		for (Character e : list)
+//	private static void output(List<Character> list) {
+//		for (Character e : list)
+//			System.out.printf("%s ", e);
+//		System.out.println();
+//	}
+
+	//Rewrite the output method in a generic form
+	private static <T> void output(List<T> list){
+		for (T e: list)
 			System.out.printf("%s ", e);
 		System.out.println();
 	}

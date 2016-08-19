@@ -35,9 +35,15 @@ public class Algorithms2 {
 
 	}
 
-	private static void showList(List<String> list) {
-		for (String s : list)
-			System.out.printf("%s ", s);
+//	private static void showList(List<String> list) {
+//		for (String s : list)
+//			System.out.printf("%s ", s);
+//		System.out.println();
+//	}
+
+	private static <T> void showList(List<T> list){
+		for (T e : list)
+			System.out.printf("%s ", e);
 		System.out.println();
 	}
 }
