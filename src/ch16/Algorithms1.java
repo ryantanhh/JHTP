@@ -1,6 +1,7 @@
 package ch16;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -45,10 +46,18 @@ public class Algorithms1 {
 //		System.out.println();
 //	}
 
-	//Rewrite the output method in a generic form
+//	Rewrite the output method in a generic form
 	private static <T> void output(List<T> list){
 		for (T e: list)
 			System.out.printf("%s ", e);
 		System.out.println();
 	}
+
+
+//	private static void output(Collection<?> list){
+//		for (Object e: list)
+//			System.out.printf("%s ", e);
+//		System.out.println();
+//	}
+
 }
