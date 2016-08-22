@@ -22,7 +22,17 @@ public class ArraysAndStreams {
 			.collect(Collectors.toList());
 
 		System.out.printf(
-				"Values greater than 4 (Assending with streams): %s%n", 
+				"Values greater than 4: %s%n", 
+				greaterThan4);
+
+		System.out.printf(
+				"Sorted values greater than 4: %s%n", 
+				greaterThan4
+				.stream()
+				.sorted()
+				.collect(Collectors.toList()));
+		System.out.printf(
+				"Values greater than 4 (asscending with streams): %s%n", 
 				greaterThan4
 				.stream()
 				.sorted()
